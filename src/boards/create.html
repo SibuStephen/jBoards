@@ -1,0 +1,37 @@
+<md-toolbar layout="row">
+  <h1>s</h1>
+</md-toolbar>
+<div flex layout="row">
+  <md-sidenav  ng-click="" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
+    <md-list>
+      <md-subheader class="md-no-sticky">Create Board</md-subheader>
+      <md-list-item>
+        <md-input-container class="md-block" flex-gt-xs>
+          <label>Name</label>
+          <input ng-model="vm.board.name">
+        </md-input-container>
+      </md-list-item>
+
+      <md-list-item>
+        <md-input-container class="md-block">
+          <label>Description</label>
+          <textarea ng-model="vm.board.description" md-maxlength="100" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+      </md-list-item>
+
+      <md-list-item>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Board Type</label>
+            <md-select ng-model="vm.board.type">
+              <md-option ng-repeat="type in vm.boardtypes" value="{{type.id}}">
+                {{type.name}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+  <md-content flex id="content">
+
+  </md-content>
+</div>
