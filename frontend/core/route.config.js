@@ -8,21 +8,21 @@
 	  $stateProvider
 	    .state('login', {
 	      url: "/",
-	      templateUrl: "src/login/login.html"
+	      templateUrl: "frontend/login/login.html"
 	    })
 	    .state('board', {
 	    	abstract:true,
 	      url: "/board",
-	      templateUrl: "src/boards/main.html",
+	      templateUrl: "frontend/boards/main.html",
 	      controller:'boardController as vm'
 	    })
 	    .state('board.create', {
 	      url: "/create",
-	      templateUrl: "src/boards/create.html"
+	      templateUrl: "frontend/boards/create.html"
 	    })
 	    .state('board.view', {
 	      url: "/view/:id",
-	      templateUrl: "src/boards/view.html"
+	      templateUrl: "frontend/boards/view.html"
 	    });
 	});
 })(angular.module('app.core'));
