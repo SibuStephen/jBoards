@@ -4,7 +4,7 @@
   "description": "boards for retro meetings ",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower cache clean && bower install"
   },
   "repository": {
     "type": "git",
