@@ -2,7 +2,7 @@
   "name": "j-boards",
   "version": "0.0.1",
   "description": "boards for retro meetings ",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "postinstall": "bower install"
   },
