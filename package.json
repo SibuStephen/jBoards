@@ -21,11 +21,12 @@
   },
   "homepage": "https://github.com/Josephdias92/jBoards#readme",
   "dependencies": {
-    "bower": "^1.7.9",
-    "grunt": "^1.0.1",
-    "express": "~4.2.0",
     "body-parser": "~1.0.0",
-    "mongoose": "~3.8.11"
+    "bower": "^1.7.9",
+    "express": "~4.2.0",
+    "grunt": "^1.0.1",
+    "mongoose": "~3.8.11",
+    "node-static": "^0.7.7"
   },
   "devDependencies": {
     "grunt-injector": "~0.6.1",
