@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     wiredep: {
       task: {
-        src: ['index.html']
+        src: ['public/index.html']
       }
     },
     injector: {
@@ -20,10 +20,10 @@ module.exports = function(grunt) {
       dev:{
         options: {
           addRootSlash: false,
-          template: 'index.html'
+          template: 'public/index.html'
         },
         files: {
-          'index.html': [
+          'public/index.html': [
             'src/app.js',
             'src/**/*.module.js',
             'src/**/*.js',
