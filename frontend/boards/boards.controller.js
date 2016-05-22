@@ -9,16 +9,6 @@
 			{name:'Todos',id:4,section:['Todos']},
 			{name:'Pros and Cons',id:5,section:['Pros','Cons']}
 		];
-		vm.board.type=vm.boardtypes[0];
-		vm.rowSpan=2;
-		vm.getRowSpan=function(){
-			var len=vm.board.type.section.length;
-			var span=1;
-			if(len<=3){
-				span=2
-			}
-			console.log(span,len);
-			vm.rowSpan=span;
-		}
+		vm.board.type=vm.boardtypes[1];
 	})
 })(angular.module('app.boards'));
