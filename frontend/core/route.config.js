@@ -11,7 +11,7 @@
 	      templateUrl: "frontend/login/login.html"
 	    })
 	    .state('board', {
-	    	abstract:true,
+				abstract:true,
 	      url: "/board",
 	      templateUrl: "frontend/boards/main.html",
 	      controller:'boardController as vm'

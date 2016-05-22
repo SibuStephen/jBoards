@@ -1,8 +1,7 @@
-<md-toolbar layout="row">
-  <h1>s</h1>
-</md-toolbar>
-<div flex layout="row">
-  <md-sidenav  ng-click="" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
+
+
+<div layout="row" layout-xs="column">
+  <div flex="40">
     <md-list>
       <md-subheader class="md-no-sticky">Create Board</md-subheader>
       <md-list-item>
@@ -13,25 +12,47 @@
       </md-list-item>
 
       <md-list-item>
-        <md-input-container class="md-block">
+        <md-input-container class="md-block" flex-gt-xs>
           <label>Description</label>
           <textarea ng-model="vm.board.description" md-maxlength="100" rows="5" md-select-on-focus></textarea>
         </md-input-container>
       </md-list-item>
 
       <md-list-item>
-        <md-input-container class="md-block" flex-gt-sm>
+        <md-input-container class="md-block" flex-gt-xs>
             <label>Board Type</label>
             <md-select ng-model="vm.board.type">
-              <md-option ng-repeat="type in vm.boardtypes" value="{{type.id}}">
+              <md-option ng-repeat="type in vm.boardtypes" ng-value="type">
                 {{type.name}}
               </md-option>
             </md-select>
           </md-input-container>
       </md-list-item>
+      <md-list-item>
+        <md-contact-chips flex-gt-xs ng-model="vm.board.team" secondary-placeholder="Enter Team Name or Emails" placeholder="Enter Team Name or Emails">
+        </md-contact-chips>
+      </md-list-item>
+      <md-list-item    md-no-ink>
+        <div layout-margin flex-gt-xs>
+          <md-checkbox class="md-primary" ng-model="vm.ifTimeout" aria-label="timeout">
+            Timeout (15 Mins)
+          </md-checkbox>
+        </div>
+      </md-list-item>
     </md-list>
-  </md-sidenav>
-  <md-content flex id="content">
-    <div></div>
-  </md-content>
+  </div>
+  <div flex layout-margin>
+      <h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
+      <md-grid-list
+        md-cols-xs="1" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="3"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+        <md-grid-tile class="md-whiteframe-2dp" ng-repeat="section in vm.board.type.section">
+          <md-grid-tile-header>
+            <h3>{{section}}</h3>
+          </md-grid-tile-header>
+          {{i}}
+        </md-grid-tile>
+      </md-grid-list>
+  </div>
 </div>
