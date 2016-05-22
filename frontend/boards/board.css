@@ -5,3 +5,11 @@
 .text-center{
 	text-align: center;
 }
+.sticky{
+	font-family: Handwritten;
+	background-color: #ffff88;
+    border: 1px solid #ffff66;
+    padding: 5px;
+    min-height: 100px;
+    min-width: 100px;
+}

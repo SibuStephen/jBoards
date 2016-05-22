@@ -1,13 +1,13 @@
 
 
 <div layout="row" layout-xs="column">
-  <div flex="40">
+  <div flex="30">
     <md-list>
       <md-subheader class="md-no-sticky">Create Board</md-subheader>
       <md-list-item>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Name</label>
-          <input ng-model="vm.board.name">
+          <input  ng-model="vm.board.name">
         </md-input-container>
       </md-list-item>
 
@@ -21,7 +21,7 @@
       <md-list-item>
         <md-input-container class="md-block" flex-gt-xs>
             <label>Board Type</label>
-            <md-select ng-model="vm.board.type">
+            <md-select ng-change="vm.getRowSpan()" ng-model="vm.board.type">
               <md-option ng-repeat="type in vm.boardtypes" ng-value="type">
                 {{type.name}}
               </md-option>
@@ -34,7 +34,7 @@
       </md-list-item>
       <md-list-item    md-no-ink>
         <div layout-margin flex-gt-xs>
-          <md-checkbox class="md-primary" ng-model="vm.ifTimeout" aria-label="timeout">
+          <md-checkbox class="md-primary" ng-model="vm.board.timeout" aria-label="timeout">
             Timeout (15 Mins)
           </md-checkbox>
         </div>
@@ -45,13 +45,49 @@
       <h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
       <md-grid-list
         md-cols-xs="1" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="3"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-row-height-gt-md="1:1" md-row-height="4:2"
         md-gutter="12px" md-gutter-gt-sm="8px" >
-        <md-grid-tile class="md-whiteframe-2dp" ng-repeat="section in vm.board.type.section">
-          <md-grid-tile-header>
-            <h3>{{section}}</h3>
-          </md-grid-tile-header>
-          {{i}}
+        <md-grid-tile md-rowspan="{{vm.rowSpan}}" class="md-whiteframe-2dp" ng-repeat="section in vm.board.type.section">
+          <div layout="column" layout-fill>
+            <div layout="row" layout-padding layout-align="center">
+              <h5>{{section}}</h5>
+            </div>
+            <div class='' layout="row" layout-wrap>
+              <md-card class="md-card sticky" >
+                <md-card-content>
+                some text
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                  <md-button>Plus</md-button>
+                </md-card-actions>
+              </md-card>
+              <md-card class="md-card sticky" >
+                <md-card-content>
+                some text
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                  <md-button>Plus</md-button>
+                </md-card-actions>
+              </md-card>
+              <md-card class="md-card sticky" >
+                <md-card-content>
+                some text
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                  <md-button>Plus</md-button>
+                </md-card-actions>
+              </md-card>
+              <md-card class="md-card sticky" >
+                <md-card-content>
+                some text
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                  <md-button>Plus</md-button>
+                </md-card-actions>
+              </md-card>
+              
+            </div>
+          </div>
         </md-grid-tile>
       </md-grid-list>
   </div>

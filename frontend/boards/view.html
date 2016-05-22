@@ -1,1 +1,25 @@
-<h2>view1 page</h2>
+<div flex layout-margin>
+	<h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
+	<md-grid-list
+	md-cols-xs="1" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="3"
+	md-row-height-gt-md="1:1" md-row-height="4:2"
+	md-gutter="12px" md-gutter-gt-sm="8px" >
+	<md-grid-tile md-rowspan="{{vm.rowSpan}}" class="md-whiteframe-2dp" ng-repeat="section in vm.board.type.section">
+	<div layout="column" layout-fill>
+		<div layout="row" layout-padding layout-align="center">
+			<b></b>
+		</div>
+		<div class='' layout="row" layout-wrap>
+			<md-card class="md-card sticky" >
+				<md-card-content>
+				some text
+				</md-card-content>
+				<md-card-actions layout="row" layout-align="end end">
+                  <md-button class="md-icon-button"><md-icon md-font-icon="fa fa-heart"></md-icon></md-button>
+                </md-card-actions>
+			</md-card>
+		</div>
+	</div>
+	</md-grid-tile>
+	</md-grid-list>
+</div>
