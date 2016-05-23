@@ -1,5 +1,4 @@
 (function(module) {
-	module.config(function($mdThemingProvider) {
-		
-	});
+  module.config(function($mdThemingProvider) {
+  });
 })(angular.module('app.core'));
