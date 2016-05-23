@@ -19,13 +19,13 @@ module.exports = function(grunt) {
         },
         files: {
           'index.html': [
-            'frontend/app.js',
-            'frontend/**/*.module.js',
-            'frontend/**/*.js',
-            '!frontend/**/*.spec.js',
-            '!frontend/**/*.mock.js',
+            'app/app.js',
+            'app/**/*.module.js',
+            'app/**/*.js',
+            '!app/**/*.spec.js',
+            '!app/**/*.mock.js',
             'css/*.css',
-            'frontend/**/*.css'
+            'app/**/*.css'
           ]
         }
       }
