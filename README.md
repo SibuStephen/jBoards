@@ -17,7 +17,8 @@ npm install
 Usage
 -----
 
-```node, angular, angular material
+```
+node, angular, angular material
 ```
 
 
