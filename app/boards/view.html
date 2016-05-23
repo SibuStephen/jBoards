@@ -1,11 +1,11 @@
 <div layout-margin>
   <h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
   <div layout="row" layout-wrap >
-  <div flex="30" class="md-whiteframe-2dp" layout-margin ng-repeat="section in vm.board.type.section">
-      <div layout-align="center">
-        {{section.name}} 
-      </div>
-      <div layout="row"   dnd-list="section.data" flex  layout-wrap>
+  <div flex="30" dnd-list="section.data" class="md-whiteframe-2dp" layout-margin ng-repeat="section in vm.board.type.section">
+    <div layout-align="center">
+      {{section.name}} 
+    </div>
+      <div layout="row" flex  layout-wrap>
         <md-card dnd-draggable="sticky"
         dnd-moved="section.data.splice($index, 1)"
         dnd-effect-allowed="move"
