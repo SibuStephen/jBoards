@@ -1,7 +1,6 @@
-/*jslint node: true */
+/* jslint node: true */
 "use strict";
 module.exports = function(grunt) {
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     wiredep: {
@@ -13,7 +12,7 @@ module.exports = function(grunt) {
       options: {
         // Task-specific options go here.
       },
-      dev:{
+      dev: {
         options: {
           addRootSlash: false,
           template: 'index.html'
@@ -27,11 +26,11 @@ module.exports = function(grunt) {
             '!frontend/**/*.mock.js',
             'css/*.css',
             'frontend/**/*.css'
-          ],
+          ]
         }
       }
-    },
+    }
   });
-	grunt.loadNpmTasks('grunt-injector');
+  grunt.loadNpmTasks('grunt-injector');
   grunt.loadNpmTasks('grunt-wiredep');
 };
