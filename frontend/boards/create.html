@@ -28,6 +28,14 @@
             </md-select>
           </md-input-container>
       </md-list-item>
+
+      <md-list-item ng-repeat="section in vm.board.type.section">
+        <md-input-container class="md-block" flex-gt-xs>
+          <label>Section Name({{::section.originalName}})</label>
+          <input  ng-model="section.name">
+        </md-input-container>
+      </md-list-item>
+
       <md-list-item>
         <md-contact-chips flex-gt-xs ng-model="vm.board.team" secondary-placeholder="Enter Team Name or Emails" placeholder="Enter Team Name or Emails">
         </md-contact-chips>
@@ -46,7 +54,7 @@
   <div layout="row" layout-wrap>
     <div flex="30" class="md-whiteframe-2dp" layout-padding layout-margin ng-repeat="section in vm.board.type.section">
       <div layout-align="center">
-        {{section.name}}
+        {{section.name||section.originalName}}
       </div>
       <div layout="row" layout-wrap>
         <md-card flex="42" class="md-card sticky-preview" >

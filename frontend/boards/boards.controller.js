@@ -7,12 +7,15 @@
       id: 1,
       section: [{
         name: 'What went well',
+        originalName: 'What went well',
         data: []
       }, {
         name: 'what can be improved',
+        originalName: 'what can be improved',
         data: []
       }, {
         name: 'Action Items',
+        originalName: 'Action Items',
         data: []
       }]
     }, {
@@ -20,18 +23,23 @@
       id: 2,
       section: [{
         name: 'Keep Doing',
+        originalName: 'Keep Doing',
         data: []
       }, {
         name: 'Less Of',
+        originalName: 'Less Of',
         data: []
       }, {
         name: 'More Of',
+        originalName: 'More Of',
         data: []
       }, {
         name: 'Stop Doing',
+        originalName: 'Stop Doing',
         data: []
       }, {
         name: 'Start Doing',
+        originalName: 'Start Doing',
         data: []
       }]
     }, {
@@ -39,21 +47,27 @@
       id: 3,
       section: [{
         name: 'Managing-Blue',
+        originalName: 'Managing-Blue',
         data: []
       }, {
         name: 'Information-White',
+        originalName: 'Information-White',
         data: []
       }, {
         name: 'Emotions-Red',
+        originalName: 'Emotions-Red',
         data: []
       }, {
         name: 'Discernment-Black',
+        originalName: 'Discernment-Black',
         data: []
       }, {
         name: 'Optimistic response-Yellow',
+        originalName: 'Optimistic response-Yellow',
         data: []
       }, {
         name: 'Creativity-Green',
+        originalName: 'Creativity-Green',
         data: []
       }]
     }, {
@@ -61,6 +75,7 @@
       id: 4,
       section: [{
         name: 'Todos',
+        originalName: 'Todos',
         data: []
       }]
     }, {
@@ -68,9 +83,11 @@
       id: 5,
       section: [{
         name: 'Pros',
+        originalName: 'Pros',
         data: []
       }, {
         name: 'Cons',
+        originalName: 'Cons',
         data: []
       }]
     }];
