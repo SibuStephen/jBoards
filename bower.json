@@ -18,10 +18,11 @@
     "angular": "angularjs#^1.5.5",
     "angular-material": "^1.0.9",
     "angular-ui-router": "^0.3.0",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "angular-drag-and-drop-lists": "^1.4.0"
   },
-  "overrides":{
-    "font-awesome":{
+  "overrides": {
+    "font-awesome": {
       "main": [
         "css/font-awesome.css"
       ]

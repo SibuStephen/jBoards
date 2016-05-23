@@ -1,14 +1,17 @@
 <div layout-margin>
   <h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
-  <div layout="row" layout-wrap>
-  <div flex="30" class="md-whiteframe-2dp" layout-margin ng-repeat="section in vm.board.type.section">
+  <div layout="row" layout-wrap >
+  <div flex="30"  dnd-list="section.data" class="md-whiteframe-2dp" layout-margin ng-repeat="section in vm.board.type.section">
       <div layout-align="center">
         {{section.name}} <md-button md-no-ink class="md-primary" ng-click="vm.addSticky(section.data)">Add</md-button>
       </div>
-      <div layout="row" layout-wrap>
-        <md-card flex="45" class="md-card sticky" ng-repeat="sticky in section.data" >
+      <div layout="row"  layout-wrap>
+        <md-card dnd-draggable="sticky"
+        dnd-moved="section.data.splice($index, 1)"
+        dnd-effect-allowed="move"
+ flex="45" class="md-card sticky" ng-repeat="sticky in section.data" >
           <md-card-content>
-            <textarea layout-fill class="typing" elastic></textarea>
+            <textarea layout-fill class="typing" ng-model="sticky.text" elastic></textarea>
           </md-card-content>
           <md-card-actions layout="row" layout-align="end end">
             <md-button class="md-icon-button"><md-icon md-font-icon="fa fa-heart"></md-icon></md-button>

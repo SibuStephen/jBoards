@@ -1,3 +1,3 @@
 (function(angular) {
-  angular.module('app.boards', []);
+  angular.module('app.boards', ['dndLists']);
 })(angular);
