@@ -97,5 +97,10 @@
     vm.addSticky = function(arrRef) {
       arrRef.push({text:"Enter Your Text Here"});
     };
+
+    vm.dropCallback = function(event, index, item) {
+      console.log(index,item);
+      return item;
+    };
   });
 })(angular.module('app.boards'));

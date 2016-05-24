@@ -18,6 +18,12 @@
       .state('layout.board', {
         url: "/board/:id",
         controller: 'boardController as vm',
+        params: {
+          id: {
+            value: null,
+            squash: true
+          }
+        },
         templateUrl: function($stateParams) {
           if ($stateParams.id) {
             return 'app/boards/view.html';
