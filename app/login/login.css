@@ -1,5 +1,6 @@
 .login-page{
-	min-height: 500px;
+	min-height: 100vh;
+	font-family: Roboto, sans-serif;
 }
 .login-page .login-form{
 	padding: 25px;
