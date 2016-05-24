@@ -51,7 +51,7 @@
   </div>
 <div flex="70" layout-margin>
   <h3 class="text-center">{{vm.board.name||"Board Name"}}</h3>
-  <div layout="row" layout-wrap>
+  <div layout="row" layout-wrap layout-align="center center">
     <div flex="30" class="md-whiteframe-2dp" layout-padding layout-margin ng-repeat="section in vm.board.type.section track by $index">
       <div layout-align="center">
         {{section.name}}

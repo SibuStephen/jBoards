@@ -97,5 +97,10 @@
     vm.addSticky = function(arrRef) {
       arrRef.push({});
     };
+
+    vm.dropCallback = function(event, index, item) {
+      console.log(index,item);
+      return item;
+    };
   });
 })(angular.module('app.boards'));
