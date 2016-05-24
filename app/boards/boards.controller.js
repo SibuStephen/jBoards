@@ -95,7 +95,7 @@
     vm.board.type = vm.boardtypes[1];
 
     vm.addSticky = function(arrRef) {
-      arrRef.push({});
+      arrRef.push({text:"Enter Your Text Here"});
     };
 
     vm.dropCallback = function(event, index, item) {
