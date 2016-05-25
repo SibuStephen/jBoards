@@ -98,6 +98,9 @@
       arrRef.push({});
     };
 
+    vm.saveSticky = function(data) {
+      console.log(data)
+    }
     vm.dropCallback = function(event, index, item) {
       console.log(index, item);
       return item;
