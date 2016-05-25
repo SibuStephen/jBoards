@@ -8,7 +8,7 @@
     $stateProvider
       .state('login', {
         url: "/",
-        templateUrl: "app/login/login.html"
+        templateUrl: "app/authentication/login.html"
       })
       .state('layout', {
         abstract: true,
