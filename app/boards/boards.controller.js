@@ -1,11 +1,10 @@
 (function(module) {
-  module.controller('boardController', function(Board, $stateParams, $state) {
+  module.controller('boardController', function(Board, $stateParams, $state,BoardGet) {
     var vm = this;
     vm.board = {};
     var id = $stateParams.id;
     if (id) {
-      Board.get({id:id}, function(board) {
-        console.log(board)
+      BoardGet.$promise.then(function(board) {
         vm.board = board;
       });
     } else {
